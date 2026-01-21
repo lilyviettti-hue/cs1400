@@ -2,7 +2,7 @@
 # Date:      2026-01-13
 # Course:    CS 1400-001, University of Utah, Kahlert School of Computing
 # Instructor: H. James de St. Germain
-# Copyright: CS 1400 and [Your Name(s)] - This work may not
+# Copyright: CS 1400 and Lily Vietti - This work may not
 #            be copied for use in Academic Coursework.
 #
 # I, Lily Vietti, certify that I wrote this code from scratch and did not
