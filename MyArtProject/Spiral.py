@@ -21,21 +21,16 @@
 import turtle
 
 window = turtle.Screen()
-window.setup(width=800, height=600)
 window.title("Spiral")
-
-a_turtle = turtle.Turtle()
-a_turtle.speed(0)
+my_turtle = turtle.Turtle()
 
 # Draw a spiral with increasing segment lengths
 segment_length = 5
 angle_turn = 90
 num_segments = 20
-
 for segment in range(num_segments):
-    a_turtle.forward(segment_length)
-    a_turtle.right(angle_turn)
+    my_turtle.forward(segment_length)
+    my_turtle.right(angle_turn)
     segment_length += 5
 
-a_turtle.hideturtle()
 window.exitonclick()

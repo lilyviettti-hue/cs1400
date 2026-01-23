@@ -22,24 +22,19 @@
 import turtle
 
 window = turtle.Screen()
-window.setup(width=800, height=600)
 window.title("Circle")
-
-a_turtle = turtle.Turtle()
-a_turtle.speed(0)
-a_turtle.pensize(5)
+my_turtle = turtle.Turtle()
+my_turtle.pensize(5)
 
 # Draw a circle using 360 segments with gradually increasing purple
 segment_length = 1
 num_segments = 360
 angle_per_segment = 360 / num_segments
-
 for segment in range(num_segments):
     # Calculate purple color - gradually increase from dark to light purple
     purple_intensity = segment / num_segments
-    a_turtle.pencolor(purple_intensity * 0.5, 0, purple_intensity)
-    a_turtle.forward(segment_length)
-    a_turtle.right(angle_per_segment)
-    
-a_turtle.hideturtle()
+    my_turtle.pencolor(purple_intensity * 0.5, 0, purple_intensity)
+    my_turtle.forward(segment_length)
+    my_turtle.right(angle_per_segment)
+
 window.exitonclick()

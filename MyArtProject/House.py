@@ -21,48 +21,42 @@
 import turtle
 
 window = turtle.Screen()
-window.setup(width=800, height=600)
 window.title("House")
+my_turtle = turtle.Turtle()
 
-a_turtle = turtle.Turtle()
-a_turtle.speed(0)
-
-# Draw the main building (rectangle)
+# Main building dimensions
 building_width = 150
 building_height = 100
 
-a_turtle.penup()
-a_turtle.goto(-75, 50)
-a_turtle.pendown()
+# Position turtle to start drawing the building
+my_turtle.penup()
+my_turtle.goto(-75, 50)
+my_turtle.pendown()
 
-# Draw rectangle: top-left to top-right to bottom-right to bottom-left
-a_turtle.forward(building_width)
-a_turtle.right(90)
-a_turtle.forward(building_height)
-a_turtle.right(90)
-a_turtle.forward(building_width)
-a_turtle.right(90)
-a_turtle.forward(building_height)
-a_turtle.right(90)
+# Draw a rectangle
+for side in range(2):
+    my_turtle.forward(building_width)
+    my_turtle.right(90)
+    my_turtle.forward(building_height)
+    my_turtle.right(90)
 
 # Draw the roof (triangle on top)
-a_turtle.penup()
-a_turtle.goto(-75, 50)
-a_turtle.pendown()
-
-a_turtle.goto(0, 110)
-a_turtle.goto(75, 50)
-a_turtle.goto(-75, 50)
+my_turtle.penup()
+my_turtle.goto(-75, 50)
+my_turtle.pendown()
+my_turtle.left(45)
+my_turtle.forward(106)  # length of roof side
+my_turtle.right(90)
+my_turtle.forward(106)
+my_turtle.right(135)
+my_turtle.forward(building_width)
 
 # Draw the window in the roof
-window_size = 20
-a_turtle.penup()
-a_turtle.goto(-20, 70)
-a_turtle.pendown()
-
+my_turtle.penup()
+my_turtle.goto(10, 65)
+my_turtle.pendown()
 for i in range(4):
-    a_turtle.forward(window_size)
-    a_turtle.right(90)
+    my_turtle.forward(20)
+    my_turtle.right(90)
 
-a_turtle.hideturtle()
 window.exitonclick()

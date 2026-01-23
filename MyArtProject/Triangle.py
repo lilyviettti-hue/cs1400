@@ -14,25 +14,20 @@
 # the completion of the assignment are cited in my CS1400 file.
 
 # Program Purpose:
-# This program uses the turtle graphics library to draw an equilateral triangle.
+# This program uses a turtle to draw an equilateral triangle.
 
 ###
+
 import turtle
 
 window = turtle.Screen()
-window.setup(width=800, height=600)
 window.title("Equilateral Triangle")
+my_turtle = turtle.Turtle()
+my_turtle.width(5)
 
-a_turtle = turtle.Turtle()
-a_turtle.speed(0)
-
-# Draw an equilateral triangle
-side_length = 200
-angle = 120  # exterior angle for equilateral triangle
-
+# Draw an equilateral triangle with side length 200
 for side in range(3):
-    a_turtle.forward(side_length)
-    a_turtle.right(angle)
+    my_turtle.forward(200)
+    my_turtle.right(120)
 
-a_turtle.hideturtle()
 window.exitonclick()
