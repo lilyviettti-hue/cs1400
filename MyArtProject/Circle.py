@@ -31,9 +31,9 @@ segment_length = 1
 num_segments = 360
 angle_per_segment = 360 / num_segments
 for segment in range(num_segments):
-    # Calculate purple color - gradually increase from dark to light purple
+    # Gradually increase the purple intensity
     purple_intensity = segment / num_segments
-    my_turtle.pencolor(purple_intensity * 0.5, 0, purple_intensity)
+    my_turtle.pencolor(purple_intensity, 0, purple_intensity)
     my_turtle.forward(segment_length)
     my_turtle.right(angle_per_segment)
 
